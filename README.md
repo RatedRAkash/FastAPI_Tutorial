@@ -28,3 +28,12 @@ For Production run with Multiple Workers
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4 --reload
 ```
+
+## Run using the Docker Image
+
+Run the following command in the project root (where your Dockerfile is located):
+
+```bash
+docker build -t my-fastapi-app .
+docker run --rm -d -p 9998:9998 --name my-fastapi-container my-fastapi-app
+```
